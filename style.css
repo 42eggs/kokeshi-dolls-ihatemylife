@@ -1,0 +1,861 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500&family=Trocchi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+
+
+:root {
+    font-size: 16px;
+    font-family: 'Sora', sans-serif;
+    --color-black: #151515;
+    --color-brick: #461111;
+    --color-red: #cd1919;
+    --color-brickwhite: #beabab;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: white;
+}
+
+
+/* scroll bar effect */
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--color-red);
+}
+
+
+
+
+
+/* navbar */
+
+nav.navbar {
+    background: rgba(70, 17, 17, 0.8);
+}
+
+
+
+/* navlink effect */
+
+.nav-link {
+    position: relative;
+    color: var(--color-brickwhite);
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.nav-link:after {
+    content: "";
+    position: absolute;
+    background-color: var(--color-red);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.nav-link:hover {
+    color: white !important;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+.log-buttons {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 9px 25px;
+    color: var(--color-brickwhite);
+    background-color: var(--color-brick);
+    border: 1px var(--color-brickwhite) solid;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+    margin: 4px;
+    text-decoration: none;
+}
+
+.log-buttons:hover {
+    color: white;
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+}
+
+
+
+/* index hero */
+
+.banner-image {
+    background-image: linear-gradient(rgb(21, 21, 21, 0.5), rgb(21, 21, 21, 0.5)), url('images/bg1.jpg');
+    background-size: cover;
+}
+
+.hero-heading {
+    letter-spacing: 1.25rem;
+    font-size: 5.5rem;
+    color: white;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.hero-heading-1 {
+    letter-spacing: 0.8rem;
+    font-size: 4rem;
+    color: var(--color-brickwhite);
+    font-family: 'Cinzel Decorative', cursive;
+    transition: 0.75s ease-in-out;
+}
+
+.hero-heading:hover {
+    -webkit-text-stroke: 1px white;
+    color: white;
+    color: transparent;
+}
+
+.hero-heading-1:hover {
+    color: white;
+}
+
+
+
+
+
+/* buynow button index */
+
+.buynow {
+    margin: 10%;
+    text-align: center;
+    width: 200px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all .5s ease-in-out;
+    background-image: linear-gradient(to right, var(--color-brickwhite), var(--color-red), var(--color-red), var(--color-black));
+    letter-spacing: 0.15rem;
+}
+
+
+.buynow:hover {
+    background-position: 100% 0;
+    transition: all .4s ease-in-out;
+}
+
+.buynow:focus {
+    outline: none;
+}
+
+
+
+/* content boxes */
+
+.content-col {
+    margin: 0;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: left;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+}
+
+.content-header {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.img-fluid {
+    margin: auto;
+}
+
+.text-column-1 {
+    background-color: var(--color-black);
+}
+
+
+.text-column-2 {
+    background-color: var(--color-red);
+}
+
+
+
+
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+
+/* h1 section */
+
+.section-content-header {
+    text-align: center;
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--color-brick);
+    font-size: 4rem;
+    letter-spacing: 0.75rem;
+}
+
+
+
+
+
+
+/* line */
+
+
+.line-container {
+    height: 27.5vh;
+}
+
+.line-outer {
+    width: 1px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.line-inner {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    background: var(--color-red);
+    top: 35%;
+    box-shadow: 0px 0px 30px 20px var(--color-red);
+}
+
+
+
+/* footer */
+
+.footer-container {
+    text-align: center;
+    color: var(--color-brickwhite);
+    background-color: var(--color-red);
+}
+
+
+.footer-2 {
+    background-color: var(--color-brick);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--color-brickwhite) !important;
+    transition: ease 0.5s;
+}
+
+.footer-link:hover {
+    color: white !important;
+}
+
+.mb-4 .btn:hover {
+    color: var(--color-red)
+}
+
+
+
+
+
+
+
+
+
+
+
+/* items display store */
+
+
+
+
+.box {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 80px;
+    margin-bottom: 80px;
+}
+
+.product {
+    text-align: center;
+    transition: all 500ms ease-in-out;
+}
+
+.product:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.225);
+}
+
+.product .img-cover {
+    overflow: hidden;
+}
+
+.product img {
+    transition: all 500ms ease-in-out;
+}
+
+.product:hover img {
+    transform: scale(1.15);
+}
+
+
+.product p {
+    color: var(--color-black);
+    margin: 10%;
+    font-weight: bold;
+}
+
+.product .price {
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-red);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.shopnow {
+    margin-top: 5%;
+    padding: 2.5%;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+    border: 1px solid var(--color-red);
+    color: var(--color-red);
+    transition: ease-in-out 0.5s;
+}
+
+.shopnow:hover {
+    color: white;
+    background-color: var(--color-red);
+}
+
+
+
+
+
+
+
+
+
+
+/* buy now page */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: rgba(21, 21, 21, 0.5);
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: auto;
+
+}
+
+.buynow-hero-box {
+    padding: 2%;
+    background-color: rgba(190, 171, 171, 0.85);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.buynow-hero-box h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--color-brick);
+}
+
+.buynow-hero-box p {
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* product description page */
+
+
+
+
+.product-div img {
+    width: 100%;
+    display: block;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    background-color: var(--color-brickwhite);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.product-div {
+    margin: 1rem 0;
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: white;
+    border-radius: 3px;
+    column-gap: 10px;
+
+}
+
+.product-div-left {
+    padding: 20px;
+}
+
+.product-div-right {
+    padding: 20px;
+}
+
+.img-container img {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.hover-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.hover-container div {
+    border: 2px solid rgba(70, 17, 17, 0.5);
+    padding: 1rem;
+    border-radius: 3px;
+    margin: 0 4px 8px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hover-container div:hover {
+    border-color: var(--color-brick);
+}
+
+.hover-container div img {
+    width: 50px;
+    cursor: pointer;
+}
+
+.product-div-right span {
+    display: block;
+}
+
+.product-name {
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    color: black;
+}
+
+.product-price {
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-red);
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.9;
+    color: var(--color-red);
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    color: black;
+}
+
+.product-rating span {
+    margin-right: 6px;
+}
+
+
+.product-description {
+
+    font-size: 0.85rem !important;
+    /* padding: 0; */
+    margin: 0;
+    margin-top: 15px;
+    color: var(--color-black);
+}
+
+.product-description-list {
+    list-style-type: circle !important;
+}
+
+.btn-groups {
+    margin-top: 22px;
+}
+
+.btn-groups button {
+    display: inline-block;
+    font-size: 16px;
+    font-family: inherit;
+    text-transform: uppercase;
+    padding: 15px 16px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-groups button .fas {
+    margin-right: 8px;
+}
+
+.add-cart-btn {
+    background-color: var(--color-red);
+    border: 2px solid var(--color-red);
+    margin-right: 8px;
+}
+
+.add-cart-btn:hover {
+    background-color: white;
+    color: var(--color-red);
+}
+
+.buy-now-btn {
+    background-color: var(--color-brick);
+    border: 2px solid var(--color-brick);
+}
+
+.buy-now-btn:hover {
+    background-color: white;
+    color: var(--color-brick);
+}
+
+@media screen and (max-width: 992px) {
+    .product-div {
+        grid-template-columns: 100%;
+    }
+
+    .product-div-right {
+        text-align: center;
+    }
+
+    .product-rating {
+        justify-content: center;
+    }
+
+    .product-description {
+        max-width: 400px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .btn-groups button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+/* carousel */
+
+
+.carousel-item {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.carousel-caption {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.carousel-caption h1 {
+    margin-bottom: 2.5rem;
+}
+
+
+
+
+
+
+/* album */
+
+.album {
+    background-color: white !important;
+}
+
+
+.card {
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.225);
+}
+
+
+
+
+
+/* hover with text effect inside album */
+
+
+.imgeffect-img {
+    display: block;
+    width: 100%;
+}
+
+.imgeffect-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+    text-align: center;
+}
+
+.imgeffect-overlay-blur {
+    backdrop-filter: blur(2.5px);
+}
+
+.imgeffect-overlay-primary {
+    background: linear-gradient(rgba(205, 25, 25, 0.9), rgba(205, 25, 25, 0.6), rgba(205, 25, 25, 0.1));
+}
+
+.imgeffect-overlay>* {
+    transform: translateY(20px);
+    transition: 0.4s ease-in-out;
+}
+
+.imgeffect-overlay:hover {
+    opacity: 1;
+}
+
+.imgeffect-overlay:hover>* {
+    transform: translateY(0);
+}
+
+.imgeffect-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.imgeffect-description {
+    font-size: 1rem;
+    margin: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+
+/* sign in sign up  page*/
+
+.sign-main {
+    width: 400px;
+    height: 82.5vh;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px black;
+}
+
+#chk {
+    display: none;
+}
+
+.signup-div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+label {
+    color: white;
+    font-size: 2.25rem;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+input {
+    width: 60%;
+    height: 20px;
+    background: #d1d1d1;
+    justify-content: center;
+    display: flex;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: .75s ease-in-out;
+}
+
+input:focus {
+    background-color: white;
+}
+
+
+.login-input:focus {
+    color: black;
+    background-color: white;
+}
+
+
+
+
+/* sign in/ sign up box buttons */
+
+
+.sign-button {
+    width: 60%;
+    height: 3rem;
+    margin: 0.8rem auto;
+    justify-content: center;
+    display: block;
+    color: white;
+    background: var(--color-brick);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.7s ease-in-out;
+    cursor: pointer;
+}
+
+.sign-button:hover {
+    background: var(--color-red);
+}
+
+
+.reset-button {
+    width: 30%;
+    height: 35px;
+    margin-top: 0.75rem;
+    padding: 0;
+    background: rgb(50, 50, 50);
+}
+
+.reset-button:hover {
+    background: black;
+}
+
+
+.signin-b {
+    background-color: var(--color-brick);
+}
+
+
+.signin-b:hover {
+    background: var(--color-red);
+}
+
+
+
+.signin-div {
+    height: 460px;
+    background: white;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .8s ease-in-out;
+}
+
+.signin-div label {
+    color: var(--color-red);
+    transform: scale(.6);
+}
+
+#chk:checked~.signin-div {
+    transform: translateY(-500px);
+}
+
+#chk:checked~.signin-div label {
+    transform: scale(1);
+}
+
+#chk:checked~.signup-div label {
+    transform: scale(.6);
+}
