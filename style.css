@@ -401,6 +401,7 @@ nav.navbar {
     z-index: -1;
     width: 100vw;
     height: auto;
+    height: 100vh;
 
 }
 
